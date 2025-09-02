@@ -66,16 +66,16 @@ body {
 
 .site-header .subtitle {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 /* Contenedor de la barra */
 .loading-bar-container {
-  width: 250px;
-  height: 20px;               
+  width: 280px;
+  height: 12px;               
   background-color: #ddd;
   border-radius: 5px;          
   overflow: hidden;
-  margin: 1px auto 0;
+  margin: 2px auto 0;
 }
 
 /* Barra en movimiento por segmentos */
@@ -119,26 +119,46 @@ h2 {
 }
 
 /* Integrantes */
-.integrantes ul {
-  list-style: none;
-  padding: 0;
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.integrantes ul li {
-  margin: 10px 0;
+.team-card {
+  background-color: #20dbcf;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.integrantes ul li a {
-  text-decoration: none;
-  color: var(--color3);
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-card a {
+  display: block;
   font-weight: bold;
-  transition: 0.3s;
+  color: #000000;
+  text-decoration: none;
 }
 
-.integrantes ul li a:hover {
-  color: var(--color2);
+.team-card a:hover {
+  text-decoration: underline;
 }
-
 /* Contacto */
 .contacto a {
   color: var(--color1);
